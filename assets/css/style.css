@@ -1,0 +1,205 @@
+
+
+  
+  /* @import url('https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@400;500;800&family=Raleway:wght@400;600&display=swap'); */
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Yeseva+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Yeseva''Lato';
+    box-sizing: border-box; /* Border-box: padding use korle box boro hoi. Atake control kore. */
+    scroll-behavior: smooth;     /* about page a click korle smoothly scroll hobe. suddenly na*/
+}
+h1,h2,h3,h4,h5,h6{font-family: 'Yeseva';}
+p{font-family: 'lato';}
+/*------headline a oswald use so h ke dia upore only open sens p are jonn raklam------*/
+/*------BG on scroll start- for plug------------*/
+
+
+    @keyframes bgDown {
+        from{transform: translateY(-100px);}
+        to{transform: translateY(0);} 
+    }  
+    
+    
+/* plugin preloader start*/
+.preloader{position: fixed;
+width: 100%;
+height: 100vh;
+background: lightgray;z-index: 6;
+display: flex;justify-content: center;align-items: center;}
+
+.custom-loader {
+    --d:22px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    color: red;
+    box-shadow: 
+      calc(1*var(--d))      calc(0*var(--d))     0 0,
+      calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+      calc(0*var(--d))      calc(1*var(--d))     0 2px,
+      calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+      calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+      calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+      calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+    animation: s7 1s infinite steps(8);
+  }
+  
+  @keyframes s7 {
+    100% {transform: rotate(1turn)}
+  }
+/* ------------plugin preloader end*-------------/
+/*------Back to top button start-for plugin-------*/
+.back_to_top {position:fixed;bottom: 2px;right: 40px;
+   /*-- first time test then jq use korbo for condition--*/
+    animation:btt 0.4s ease-in ;z-index: 4;
+    }
+/*------Back to top button end--------*/
+/*-------- --Menu start -------------*/
+.navbar{padding: 13px 0px 13px;}
+.navbar{position: fixed; 
+background:rgba(255,255,255,0.2);width: 100%; 
+   transition:.4s;z-index: 5;}
+
+.navbar-expand-lg .navbar-collapse {
+    margin-right: 0;font-size: 14px;}
+.navbar-brand {font-size: 35px;font-weight: 600;
+}
+.nav-link {font-weight: 700;color: white;font-size: 15px;}
+.nav-link:hover {color: rgb(3, 172, 158);}
+.btn{color: white;}
+
+.nav_icon{list-style: none;}
+.nav_icon li {color: #e1b73a;}
+
+.container img{font-size: 8px;}
+/*----------------Hero part start--------------------*/
+
+
+.hero_part{background-image: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+.btn1,.btn2 {
+  border-radius: 2%;
+  font-size: 13px;
+  padding: 7px 19px;
+}
+.btn1{ background: rgba(0,0,0,0.3)}
+.btn2{ background:rgba(255,255,255,0.2)}
+.bg_animation{animation: bgDown 0.4s ease-out;
+}
+.hero_part h2{margin-top: 100px;font-size: 45px;font-weight: 600;}
+.hero_part h3{font-size: 19px;}
+
+/*---------------------second part start--------------------*/
+
+.second_con_main{width: 100%;}
+.second_con_main h4{ color: #cc9900;font-weight: 400;
+font-size: 30px;
+}
+.second_img2 img{width: 75%;}
+ 
+
+/*---------------------Fine part start--------------------*/
+
+.fine_part{background-image: url(../img/bg2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.fine_img2{background-image: url(../img/bg-txt2.png);
+width: 69%;}
+.fine_con h4{ color: white;font-weight: 400;
+  font-size: 30px;
+  }
+.fine_con p{ color: white;
+  font-size: 15px;
+  }
+.fine_list{font-size: 13px;position: relative;}
+
+/* .fine_list ul{list-style: none;} */
+
+.fine_list {
+  position: relative;
+}
+.fine_img3 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-60%);
+  z-index: 0;
+width: 0%;}
+.fin{ z-index: 2;position: relative;left: 30%;}
+/*-----------ap part start --------------*/
+.ap_part{background-image: url(..//bg4.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;height:100%;
+}
+.span{align-items: right;}
+.ap1{justify-content: space-between;color:#cc9900 ;
+border-bottom: 1px solid #e1b73a;
+}
+.spn {
+  font-weight: 600;
+  font-size: 20px;
+}
+.ap h4{color:#cc9900;font-size: 35px;font-weight: 600;}
+.ap1 h5 {
+  font-weight: 600;
+  font-size: 20px;
+}
+.ap_con_main ul{list-style: none;}
+.ap_special{border: 1px solid #f7e4ac;}
+.app_btn{background: #cc9900;color: whitesmoke;
+border-style: none;padding: 3px 14px ;
+}
+
+
+
+/*-----------Guest part start --------------*/
+
+.Guest{background-image: url(..//img/bg3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.fine_con{background-image: url(..//img/bg-txt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/*-----------appetisers- part start --------------*/
+.appetisers{background-image: url(..//img/bg4.png);}
+.app img{background-repeat: no-repeat;
+background-size: cover;background-position: center;}
+.btn3{background:#e1b73a;}
+.form_input label{color: #e1b73a;font-weight: 500;}
+.form_input input{outline: none;border: 1px solid #e1b73a;
+font-style: italic;width: 100%;
+}
+
+/*-----------footer part start --------------*/
+
+.foot{background: black;}
+.foot p{color:rgb(192, 189, 189)}
+.f_con li{list-style: none;color: rgb(214, 213, 213);}
+.f_con p{padding:0 30px}
+.f_con h6{font-size: 20px}
+.f_con ul{padding: 0 0;}
+.f_con ul li i{ width: 40px;height: 40px;
+  border: 2px solid rgb(192, 189, 189);
+  display: flex;justify-content: center;align-items: center;
+  border-radius: 10%;}
+.f_list{list-style: none;}
+
+ul{padding-left: 0;}
