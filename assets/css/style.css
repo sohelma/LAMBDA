@@ -24,33 +24,43 @@ p{font-family: 'lato';}
     }  
     
     
-/* plugin preloader start*/
+/* plugin preloader start--https://www.cssportal.com*/
 .preloader{position: fixed;
 width: 100%;
 height: 100vh;
-background: lightgray;z-index: 6;
+background: rgb(1, 22, 66);z-index: 6;
 display: flex;justify-content: center;align-items: center;}
 
 .custom-loader {
-    --d:22px;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    color: red;
-    box-shadow: 
-      calc(1*var(--d))      calc(0*var(--d))     0 0,
-      calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
-      calc(0*var(--d))      calc(1*var(--d))     0 2px,
-      calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
-      calc(-1*var(--d))     calc(0*var(--d))     0 4px,
-      calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
-      calc(0*var(--d))      calc(-1*var(--d))    0 6px;
-    animation: s7 1s infinite steps(8);
-  }
-  
-  @keyframes s7 {
-    100% {transform: rotate(1turn)}
-  }
+    width: 50px;
+    height: 50px;
+    display: grid;
+}
+.custom-loader::before,
+.custom-loader::after {    
+    content:"";
+    grid-area: 1/1;
+    --c: radial-gradient(farthest-side,#f8bf02 92%,#0000);
+    background: 
+      var(--c) 50%  0, 
+      var(--c) 50%  100%, 
+      var(--c) 100% 50%, 
+      var(--c) 0    50%;
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    animation: s2 1s infinite;
+}
+.custom-loader::before {
+  margin:4px;
+  filter:hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear
+}
+
+@keyframes s2{ 
+  100%{transform: rotate(.5turn)}
+}
+
 /* ------------plugin preloader end*-------------/
 /*------Back to top button start-for plugin-------*/
 .back_to_top {position:fixed;bottom: 2px;right: 40px;
@@ -216,6 +226,8 @@ font-style: italic;width: 100%;
 
 ul{padding-left: 0;}
 
+
+.flast{background: #000418;;}
 /*-----------Media Query part start --------------*/
 @media screen and (max-width: 1400px) {
   .Guest_con {margin: 0 150px 0 150px;} 
