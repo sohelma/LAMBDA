@@ -13,27 +13,6 @@ $(document).ready(function() {
 })
     
  //common JS--------------------------------------------------
+ // wow JS
+new WOW().init(); 
  
- var swiper = new Swiper(".mySwiper", {
-  pagination: {
-    el: ".swiper-pagination",
-    type: "progressbar",
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  slidesPerView: 1,
-   spaceBetween: 24,
-   loop: true,
-
-   autoplay: {
-    delay: 2500,
-    disableOnInteraction: true,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-
-});
